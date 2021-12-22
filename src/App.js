@@ -1,5 +1,6 @@
 import logo from './Frances.jpeg';
 import './App.css';
+import About from './components/AboutFrances';
 
 function App() {
   return (
