@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
-export default class About extends Component{
+export default class AboutMe extends Component{
     render(){
-        let data = this.props.data
+        //let data = this.props.data
         return(
-            <section id= "About Me">
+            <section id= "AboutMe">
                 <div className="row">
                     <div className="three colums">  
-                    <img className= "profile-pic"  src="Frances.jpeg" alt= " " />
+                    <h2> About Frances </h2>
+                    <img className= "profile-pic"  src= "Frances.jpg" alt= "Me" />
                     </div>
                 </div>
             </section>
