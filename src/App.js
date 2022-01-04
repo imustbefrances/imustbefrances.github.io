@@ -1,25 +1,30 @@
-import logo from './Frances.jpeg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         <code>My name is Frances Fabian and I'm going to master React!</code> 
-        </p>
-        <a
-          className="App-link"
-          href= "https://github.com/imustbefrances"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Heyy Check Me Out!
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import AboutMe from './components/AboutFrances';
+import ContactUs from './components/ContactMe';
+import {BrowserRouter as Router, Routes, Route, Link, BrowserRouter} from 'react-router-dom'
+import { Component } from 'react/cjs/react.production.min';
+
+class App extends Component {
+  render(){
+    return (
+      <div className="App">
+        <li>
+          <Link to="AboutFrances">AboutMe</Link>
+        </li>
+        <li>
+          <Link to="ContactMe">ContactUs</Link>
+        </li>
+
+
+        <Routes>
+          <Route path="AboutFrances" element={ <AboutMe/>}/>
+          <Route path="ContactMe" element={ <ContactUs/>}/>
+        </Routes>
+      </div>
+    );
+  }
+
 }
 
 export default App;
